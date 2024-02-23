@@ -6,7 +6,7 @@ require_once '../require_post_method.php';
 
 
 // Parse POST info
-require_once 'simplehelp_machine_model.php';
+require_once 'machine_model.php';
 
 
 // Default
