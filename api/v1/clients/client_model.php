@@ -81,3 +81,11 @@ if (isset($_POST['client_notes'])) {
 } else {
     $notes = '';
 }
+
+if (isset($_POST['client_simplehelp_group'])) {
+    $client_simplehelp_group = sanitizeInput($_POST['client_simplehelp_group']);
+} elseif ($client_row) {
+    $client_simplehelp_group = $client_row['client_simplehelp_group'];
+} else {
+    $client_simplehelp_group = '';
+}
