@@ -1869,3 +1869,5 @@ CREATE TABLE `asset_simplehelp_machine_processor` (
 PRIMARY KEY (`processor_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+ALTER TABLE `clients` ADD `client_simplehelp_group` varchar(200) NULL;

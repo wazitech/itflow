@@ -210,6 +210,11 @@
                                 </div>
                             </div>
 
+                            <div class="form-group">
+                                <label>Simple-Help Group Name</label>
+                                <textbox class="form-control" rows="8" name="client_simplehelp_group" />
+                            </div>
+
                         </div>
 
                     </div>
