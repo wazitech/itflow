@@ -23,11 +23,12 @@ if (isset($_POST['add_client'])) {
     $contact_extension = preg_replace("/[^0-9]/", '', $_POST['contact_extension']);
     $contact_mobile = preg_replace("/[^0-9]/", '', $_POST['contact_mobile']);
     $contact_email = sanitizeInput($_POST['contact_email']);
+    $client_simplehelp_group = sanitizeInput($_POST['client_simplehelp_group']);
 
     $extended_log_description = '';
 
     // Create client
-    mysqli_query($mysqli, "INSERT INTO clients SET client_name = '$name', client_type = '$type', client_website = '$website', client_referral = '$referral', client_rate = $rate, client_currency_code = '$currency_code', client_net_terms = $net_terms, client_tax_id_number = '$tax_id_number', client_lead = $lead, client_notes = '$notes', client_accessed_at = NOW()");
+    mysqli_query($mysqli, "INSERT INTO clients SET client_name = '$name', client_type = '$type', client_website = '$website', client_referral = '$referral', client_rate = $rate, client_currency_code = '$currency_code', client_net_terms = $net_terms, client_tax_id_number = '$tax_id_number', client_lead = $lead, client_notes = '$notes', client_accessed_at = NOW(), client_simplehelp_group = '$client_simplehelp_group'");
 
     $client_id = mysqli_insert_id($mysqli);
 
