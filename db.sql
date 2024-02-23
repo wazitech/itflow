@@ -1789,7 +1789,7 @@ CREATE TABLE `vendors` (
 
 --- Custom Tables for Simple Help integration
 
-CREATE TABLE `asset_simplehelp_machines` (
+CREATE TABLE `simplehelp_machines` (
   `machine_id` varchar(200) NOT NULL,
   `online` BOOLEAN NOT NULL,
   `name` varchar(200) NOT NULL,
@@ -1817,36 +1817,36 @@ CREATE TABLE `asset_simplehelp_machines` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-CREATE TABLE `asset_simplehelp_machine_groups` (
+CREATE TABLE `simplehelp_groups` (
   `group_id` int NOT NULL AUTO_INCREMENT,
   `order` TINYINT NOT NULL,
   `name` varchar(200) NOT NULL,
-  `asset_simplehelp_machine_group_asset_simplehelp_machine` varchar(200) NOT NULL,
+  `simplehelp_group_simplehelp_machine_id` varchar(200) NOT NULL,
   PRIMARY KEY (`group_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-CREATE TABLE `asset_simplehelp_machine_ipaddresses` (
+CREATE TABLE `simplehelp_ipaddresses` (
   `ipaddress_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   `ip` varchar(200) NOT NULL,
   `mac` varchar(200) NOT NULL,
-  `asset_simplehelp_machine_ipaddress_asset_simplehelp_machine` varchar(200) NOT NULL,
+  `simplehelp_ipaddresses_simplehelp_machine_id` varchar(200) NOT NULL,
   PRIMARY KEY (`ipaddress_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
   
-CREATE TABLE `asset_simplehelp_machine_memory` (
+CREATE TABLE `simplehelp_memory` (
 `memory_id` int(11) NOT NULL AUTO_INCREMENT,
 `capacity` BIGINT NOT NULL,
 `type` varchar(200) NOT NULL,
 `speed_hz` BIGINT NOT NULL,
-`asset_simplehelp_machine_memory_asset_simplehelp_machine` varchar(200) NOT NULL,
+`simplehelp_memory_simplehelp_machine_id` varchar(200) NOT NULL,
 PRIMARY KEY (`memory_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-CREATE TABLE `asset_simplehelp_machine_disks` (
+CREATE TABLE `simplehelp_disks` (
 `disk_id` int(11) NOT NULL AUTO_INCREMENT,
 `device_name` varchar(200) NOT NULL,
 `media_name` varchar(200) NOT NULL,
@@ -1854,18 +1854,18 @@ CREATE TABLE `asset_simplehelp_machine_disks` (
 `type` varchar(200) NOT NULL,
 `protocol` varchar(200) NOT NULL,
 `internal` BOOLEAN NOT NULL,
-`asset_simplehelp_machine_disk_asset_simplehelp_machine` varchar(200) NOT NULL,
+`simplehelp_disks_simplehelp_machine_id` varchar(200) NOT NULL,
 PRIMARY KEY (`disk_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-CREATE TABLE `asset_simplehelp_machine_processors` (
+CREATE TABLE `simplehelp_processors` (
 `processor_id` int(11) NOT NULL AUTO_INCREMENT,
 `name` varchar(200) NOT NULL,
 `speed_hz` BIGINT NOT NULL,
 `cores` TINYINT NOT NULL,
 `is64bit` BOOLEAN NOT NULL,
-`asset_simplehelp_machine_processor_asset_simplehelp_machine` varchar(200) NOT NULL,
+`simplehelp_processors_simplehelp_machine_id` varchar(200) NOT NULL,
 PRIMARY KEY (`processor_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
