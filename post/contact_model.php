@@ -16,5 +16,4 @@ $contact_technical = intval($_POST['contact_technical']);
 $location_id = intval($_POST['location']);
 $pin = sanitizeInput($_POST['pin']);
 $auth_method = sanitizeInput($_POST['auth_method']);
-$client_simplehelp_group = sanitizeInput($_POST['client_simplehelp_group']);
 
