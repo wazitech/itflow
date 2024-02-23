@@ -1836,7 +1836,7 @@ CREATE TABLE `asset_simplehelp_machine_ipaddresses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
   
-CREATE TABLE `asset_simplehelp_machine_memories` (
+CREATE TABLE `asset_simplehelp_machine_memory` (
 `memory_id` int(11) NOT NULL AUTO_INCREMENT,
 `capacity` BIGINT NOT NULL,
 `type` varchar(200) NOT NULL,
