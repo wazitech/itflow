@@ -63,6 +63,9 @@ if (isset($_GET['client_id'])) {
         $location_phone = formatPhoneNumber($row['location_phone']);
         $location_primary = intval($row['location_primary']);
 
+        // Simple Help
+        $client_simplehelp_group = nullable_htmlentities($row['client_simplehelp_group']);
+
         // Client Tags
 
         $client_tag_name_display_array = array();
