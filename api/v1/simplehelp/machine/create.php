@@ -1,12 +1,12 @@
 <?php
 
-require_once '../validate_api_key.php';
+require_once '../../validate_api_key.php';
 
-require_once '../require_post_method.php';
+require_once '../../require_post_method.php';
 
 
 // Parse POST info
-require_once 'machine_model.php';
+require_once './machine_model.php';
 
 
 // Default
@@ -26,5 +26,5 @@ if (!empty($machine_id)) {
 }
 
 // Output
-require_once '../create_output.php';
+require_once '../../create_output.php';
 
