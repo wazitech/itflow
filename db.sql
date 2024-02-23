@@ -1789,7 +1789,7 @@ CREATE TABLE `vendors` (
 
 --- Custom Tables for Simple Help integration
 
-CREATE TABLE `asset_simplehelp_machine` (
+CREATE TABLE `asset_simplehelp_machines` (
   `machine_id` varchar(200) NOT NULL,
   `online` BOOLEAN NOT NULL,
   `name` varchar(200) NOT NULL,
@@ -1817,7 +1817,7 @@ CREATE TABLE `asset_simplehelp_machine` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-CREATE TABLE `asset_simplehelp_machine_group` (
+CREATE TABLE `asset_simplehelp_machine_groups` (
   `group_id` int NOT NULL AUTO_INCREMENT,
   `order` TINYINT NOT NULL,
   `name` varchar(200) NOT NULL,
@@ -1826,7 +1826,7 @@ CREATE TABLE `asset_simplehelp_machine_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-CREATE TABLE `asset_simplehelp_machine_ipaddress` (
+CREATE TABLE `asset_simplehelp_machine_ipaddresses` (
   `ipaddress_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   `ip` varchar(200) NOT NULL,
@@ -1836,7 +1836,7 @@ CREATE TABLE `asset_simplehelp_machine_ipaddress` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
   
-CREATE TABLE `asset_simplehelp_machine_memory` (
+CREATE TABLE `asset_simplehelp_machine_memories` (
 `memory_id` int(11) NOT NULL AUTO_INCREMENT,
 `capacity` BIGINT NOT NULL,
 `type` varchar(200) NOT NULL,
@@ -1846,7 +1846,7 @@ PRIMARY KEY (`memory_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-CREATE TABLE `asset_simplehelp_machine_disk` (
+CREATE TABLE `asset_simplehelp_machine_disks` (
 `disk_id` int(11) NOT NULL AUTO_INCREMENT,
 `device_name` varchar(200) NOT NULL,
 `media_name` varchar(200) NOT NULL,
@@ -1859,7 +1859,7 @@ PRIMARY KEY (`disk_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-CREATE TABLE `asset_simplehelp_machine_processor` (
+CREATE TABLE `asset_simplehelp_machine_processors` (
 `processor_id` int(11) NOT NULL AUTO_INCREMENT,
 `name` varchar(200) NOT NULL,
 `speed_hz` BIGINT NOT NULL,
