@@ -212,11 +212,6 @@
 
                             <div class="form-group">
                                 <label>Simple-Help Group Name</label>
-                                <textbox class="form-control" rows="8" name="client_simplehelp_group" />
-                            </div>
-
-                            <div class="form-group">
-                                <label>Simple-Help Group Name</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-fw fa-tv"></i></span>
