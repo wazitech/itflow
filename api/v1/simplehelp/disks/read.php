@@ -7,8 +7,8 @@ require_once '../../require_get_method.php';
 
 // Asset via ID (single)
 if (isset($_GET['machine_id'])) {
-    $id = strval($_GET['machine_id']);
-    $sql = mysqli_query($mysqli, "SELECT * FROM simplehelp_machines WHERE machine_id = $machine_id");
+    $machine_id = strval($_GET['machine_id']);
+    $sql = mysqli_query($mysqli, "SELECT * FROM simplehelp_disks WHERE machine_id = $machine_id");
 
 }
 
