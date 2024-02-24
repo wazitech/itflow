@@ -1815,7 +1815,7 @@ CREATE TABLE `simplehelp_machines` (
   `manufacture` varchar(200) NOT NULL,
   `serial` varchar(200) NOT NULL,
   `ecc_memory` BOOLEAN NOT NULL,
-  `asset_simplehelp_machine_asset_id` int(11) NOT NULL,
+  `simplehelp_machine_asset_id` int(11) NOT NULL,
   PRIMARY KEY (`machine_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
